@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- AOS for Scroll Animations -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#calculator">Trip Calculator</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+    <img src="images/hero-image.jpg" alt="Travel Adventure" class="hero-img">
+    <h1>Discover Your Next Adventure</h1>
+    <p>Plan your dream trip with us!</p>
+    <button onclick="scrollToCalculator()">Start Planning</button>
+</section>
+ <!-- Destinations Section -->
+    <section id="destinations" class="destinations">
+        <h2>Popular Destinations</h2>
+        <div class="destination-list">
+            <div class="destination-card" data-aos="fade-up">
+                <img src="images/destination1.jpg" alt="Paris" width="300">
+                <h3>Paris</h3>
+            </div>
+            <div class="destination-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="images/destination2.jpg" alt="Maldives" width="300">
+                <h3>Maldives</h3>
+            </div>
+            <div class="destination-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="images/destination3.jpg" alt=New York" width="300">
+                <h3>New York</h3>
+            </div>
+        </div>
+    </section>
+    <!-- Trip Cost Calculator Section -->
+    <section id="calculator" class="calculator" data-aos="fade-up">
+        <h2>Trip Cost Calculator</h2>
+        <form id="trip-cost-form">
+            <label for="destination">Choose Destination:</label>
+            <select id="destination" required>
+                <option value="paris">Paris</option>
+                <option value="maldives">Maldives</option>
+                <option value="newyork">New York</option>
+            </select>
+
+            <label for="travelers">Number of Travelers:</label>
+            <input type="number" id="travelers" placeholder="Enter number of travelers" min="1" required>
+
+            <label for="accommodation">Accommodation Type:</label>
+            <select id="accommodation" required>
+                <option value="luxury">Luxury</option>
+                <option value="midrange">Midrange</option>
+                <option value="budget">Budget</option>
+            </select>
+
+            <button type="button" onclick="calculateTripCost()">Calculate Cost</button>
+        </form>
+        <p id="cost-output"></p>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact" data-aos="fade-up">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" placeholder="Your Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Your Email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="email-status"></p>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

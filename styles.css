@@ -1,0 +1,162 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+/* Background Image for Hero Section */
+.hero {
+    background-image: url('images/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.hero button {
+    padding: 15px 30px;
+    background-color: #ff6347;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #e55335;
+}
+
+/* Calculator Section */
+.calculator {
+    padding: 100px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.calculator h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+#trip-cost-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#trip-cost-form input, #trip-cost-form select, #trip-cost-form button {
+    padding: 15px;
+    margin: 10px 0;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#trip-cost-form button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+#trip-cost-form button:hover {
+    background-color: #0056b3;
+}
+
+#cost-output {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-form input, #contact-form textarea, #contact-form button {
+    padding: 15px;
+    margin: 10px 0;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#contact-form button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #218838;
+}
+
+/* Animation on Scroll (AOS) */
+[data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+}
